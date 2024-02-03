@@ -1,0 +1,214 @@
+Here is a list of basic MySQL commands. In the description, <database>, <table>, <field> should be replaced with your database, table, and field names. The example shows the input starts with `mysql>` prompt followed by the output.
+
+### Database Related SQL commands
+
+**SHOW DATABASES**
+
+Show a list of available databases.
+Example:
+
+```sql
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| directory          |
++--------------------+
+```
+
+**CREATE DATABASE <database>**
+
+Create a database.
+The following creates a database named `directory`.
+
+```sql
+mysql> CREATE DATABASE directory;
+```
+
+**SELECT DATABASE()**
+
+Show the selected database.
+
+```sql
+mysql> SELECT database();
++------------+
+| database() |
++------------+
+| directory  |
++------------+
+```
+
+**USE <database>**
+
+Select database.
+The following selects the `directory` database.
+
+```sql
+mysql> USE directory;
+```
+
+**DROP DATABASE <database>**
+
+Delete the specified database.
+The following deletes `directory` database.
+
+```sql
+mysql> DROP DATABASE directory;
+```
+
+### Table Related SQL commands
+
+**SHOW TABLES**
+
+Show a list of available tables.
+
+**CREATE TABLE**
+
+Create a table with specified format.
+
+```sql
+CREATE TABLE <table>(
+<field><type><specification>,
+<field><type><specification>,
+<field><type><specification>,
+...
+);
+```
+
+The following creates a table `users`.
+
+```sql
+mysql> CREATE TABLE users(
+    id INT AUTO_INCREMENT,
+    name VARCHAR(191),
+    PRIMARY KEY(id)
+);
+```
+
+**DESC <table>**
+
+Show the definition of the specified table.
+The following describes the `users` table.
+
+```sql
+mysql> DESC users;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int          | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(191) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+```
+
+**ALTER TABLE <table> ADD <column><column definition>**
+
+Update the specified table and add specified column(s).
+
+```sql
+mysql> ALTER TABLE users ADD company_id INT;
+```
+
+**ALTER TABLE <table> ADD FOREIGN KEY (<field>) references <referenced table>(<referenced field>)**
+
+Update the specified table and add a foreign key.
+
+```sql
+mysql> ALTER TABLE users ADD foreign key (company_id) REFERENCES companies(id);
+```
+
+**DROP TABLE <table>**
+
+Delete the specified table.
+The following deletes the `users` table.
+
+```sql
+mysql> DROP TABLE users;
+```
+
+### Row Related SQL commands
+
+**INSERT INTO <table> (<field>, <field>, ...) VALUES (<value>,<value>,...)**
+
+Create a record and store it in the specified table.
+
+```sql
+mysql> INSERT INTO users (name) VALUES ('Jane Doe');
+```
+
+**SELECT <field>,<field>,... FROM <table> WHERE <conditions>**
+
+Show the values of the specified fields from the specified table which satisfies the conditions.
+
+The following example shows values of every fields (specified by an asterisk `#`) whose `id` field is 12345 from the table `users`.
+
+```sql
+mysql> SELECT * FROM users;
++----+----------+
+| id | name     |
++----+----------+
+|  1 | Jane Doe |
++----+----------+
+```
+
+**UPDATE <table> SET <field>='<value>';**
+
+Update the specified field value of the specified table.
+The following sets the `name` field as `Jane J Doe` of a row whose `id` is 1.
+
+```sql
+mysql> UPDATE users SET name='Jane J Doe' WHERE id=1;
+```
+
+**DELETE FROM <table> WHERE <conditions>**
+
+Delete the rows that matches the conditions.
+The following deletes the row whose `id` is 1.
+
+```sql
+mysql> DELETE FROM users WHERE id=1;
+```
+
+**SELECT \* FROM <table> JOIN <another table> ON <conditionals>**
+
+Perform join on the table with another table. By default, MySQL `JOIN` is `INNER JOIN`. For `LEFT JOIN`, `RIGHT JOIN`, or `CROSS JOIN` must be specified explicitly.
+The following shows the user and the company name whose `users.company_id` matches the company `companies.id`.
+
+```sql
+mysql> SELECT users.name, companies.name FROM users JOIN companies ON users.company_id=companies.id;
++----------+-----------+
+| name     | name      |
++----------+-----------+
+| Jane Doe | Company A |
++----------+-----------+
+```
+
+**SELECT \* FROM <table> GROUP BY <field>**
+
+Show summary rows that have the same values specified by `GROUP BY`.
+The following shows the number of companies referred by the users table. The `AS` keyword creates an alias of the field.
+
+```sql
+mysql> SELECT COUNT(*) AS 'Number of Companies' FROM users GROUP BY company_id;
++---------------------+
+| Number of Companies |
++---------------------+
+|                   1 |
++---------------------+
+```
+
+**SELECT \* FROM <table> ORDER BY <field>**
+
+Sort the rows by the specified field.
+The following shows the records from the users table sorted by `id`.
+
+```sql
+mysql> SELECT * FROM users ORDER BY name;
++----+----------+---------+------------+
+| id | name     | address | company_id |
++----+----------+---------+------------+
+|  3 | Alan Doe | NULL    |       NULL |
+|  2 | Jane Doe | NULL    |          1 |
+|  4 | Zoe Doe  | NULL    |       NULL |
++----+----------+---------+------------+
+```
+
