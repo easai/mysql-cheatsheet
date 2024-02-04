@@ -3,11 +3,11 @@ MySQL: Database Related commands
 
 ## Contents
 
-- [SHOW DATABASES]()
-- [CREATE DATABASE <database>]()
-- [SELECT DATABASE()]()
-- [USE <database>]()
-- [DROP DATABASE <database>]()
+  - [SHOW DATABASES](#show-databases)
+  - [CREATE DATABASE \<database\>](#create-database-)
+  - [SELECT DATABASE()](#select-database)
+  - [USE \<database\>](#use-)
+  - [DROP DATABASE \<database\>](#drop-database-)
 
 
 ## SHOW DATABASES
@@ -26,7 +26,7 @@ SHOW DATABASES;
 +--------------------+
 ```
 
-## CREATE DATABASE <database>
+## CREATE DATABASE \<database\>
 
 Create a database.
 The following creates a database named `directory`.
@@ -50,7 +50,7 @@ SELECT database();
 +------------+
 ```
 
-## USE <database>
+## USE \<database\>
 
 Select database.
 The following selects the `directory` database.
@@ -59,7 +59,7 @@ The following selects the `directory` database.
 USE directory;
 ```
 
-## DROP DATABASE <database>
+## DROP DATABASE \<database\>
 
 Delete the specified database.
 The following deletes `directory` database.
