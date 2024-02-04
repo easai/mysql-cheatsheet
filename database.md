@@ -1,6 +1,16 @@
-### Database Related SQL commands
+MySQL: Database Related commands
+================================
 
-**SHOW DATABASES**
+## Contents
+
+- [SHOW DATABASES]()
+- [CREATE DATABASE <database>]()
+- [SELECT DATABASE()]()
+- [USE <database>]()
+- [DROP DATABASE <database>]()
+
+
+## SHOW DATABASES
 
 Show a list of available databases.
 Example:
@@ -16,7 +26,7 @@ SHOW DATABASES;
 +--------------------+
 ```
 
-**CREATE DATABASE <database>**
+## CREATE DATABASE <database>
 
 Create a database.
 The following creates a database named `directory`.
@@ -25,7 +35,7 @@ The following creates a database named `directory`.
 CREATE DATABASE directory;
 ```
 
-**SELECT DATABASE()**
+## SELECT DATABASE()
 
 Show the selected database.
 
@@ -40,7 +50,7 @@ SELECT database();
 +------------+
 ```
 
-**USE <database>**
+## USE <database>
 
 Select database.
 The following selects the `directory` database.
@@ -49,7 +59,7 @@ The following selects the `directory` database.
 USE directory;
 ```
 
-**DROP DATABASE <database>**
+## DROP DATABASE <database>
 
 Delete the specified database.
 The following deletes `directory` database.
