@@ -3,13 +3,13 @@ MySQL: Row/Record Related commands
 
 ## Contents
 
-  - [INSERT INTO \<table\> (\<field\>, \<field\>, ...) VALUES (\<value\>,\<value\>,...)](#)
-  - [SELECT \<field\>,\<field\>,... FROM \<table\> WHERE \<conditions\>](#)
-  - [UPDATE \<table\> SET \<field\>='\<value\>'](#)
-  - [DELETE FROM \<table\> WHERE \<conditions\>](#)
-  - [SELECT \* FROM \<table\> JOIN \<another table\> ON \<conditionals\>]()
-  - [SELECT \* FROM \<table\> GROUP BY \<field\>]()
-  - [SELECT \* FROM \<table\> ORDER BY \<field\>]()
+  - [INSERT INTO \<table\> (\<field\>, \<field\>, ...) VALUES (\<value\>,\<value\>,...)](##insert-into-table-field-field--values-valuevalue)
+  - [SELECT \<field\>,\<field\>,... FROM \<table\> WHERE \<conditions\>](#select-fieldfield-from-table-where-conditions)
+  - [UPDATE \<table\> SET \<field\>='\<value\>'](#update-table-set-fieldvalue)
+  - [DELETE FROM \<table\> WHERE \<conditions\>](#delete-from-table-where-conditions)
+  - [SELECT \* FROM \<table\> JOIN \<another table\> ON \<conditionals\>](#select--from-table-join-another-table-on-conditionals)
+  - [SELECT \* FROM \<table\> GROUP BY \<field\>](#select--from-table-group-by-field)
+  - [SELECT \* FROM \<table\> ORDER BY \<field\>](#select--from-table-order-by-field)
 
 ## INSERT INTO \<table\> (\<field\>, \<field\>, ...) VALUES (\<value\>,\<value\>,...)
 
