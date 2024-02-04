@@ -1,18 +1,28 @@
-### Table Related SQL commands
+MySQL: Table Related commands
+================================
 
-**SHOW TABLES**
+## Contents
+
+  - [SHOW TABLES](#show-tables)
+  - [CREATE TABLE](#create-table)
+  - [DESC \<table\>](#desc-table)
+  - [ALTER TABLE \<table\> ADD \<column\>\<column definition\>](#alter-table-table-add-column-column-definition)
+  - [ALTER TABLE \<table\> ADD FOREIGN KEY (\<field\>) references \<referenced table\>(\<referenced field\>)](#alter-table-table-add-foreign-key-field-references-referenced-table-reference-field)
+  - [DROP TABLE \<table\>](#drop-table-table)
+
+## SHOW TABLES
 
 Show a list of available tables.
 
-**CREATE TABLE**
+## CREATE TABLE
 
 Create a table with specified format.
 
 ```sql
-CREATE TABLE <table>(
-<field><type><specification>,
-<field><type><specification>,
-<field><type><specification>,
+CREATE TABLE \<table\>(
+\<field\>\<type\>\<specification\>,
+\<field\>\<type\>\<specification\>,
+\<field\>\<type\>\<specification\>,
 ...
 );
 ```
@@ -27,7 +37,7 @@ CREATE TABLE users(
 );
 ```
 
-**DESC <table>**
+## DESC \<table\>
 
 Show the definition of the specified table.
 The following describes the `users` table.
@@ -44,7 +54,7 @@ DESC users;
 +-------+--------------+------+-----+---------+----------------+
 ```
 
-**ALTER TABLE <table> ADD <column><column definition>**
+## ALTER TABLE \<table\> ADD \<column\>\<column definition\>
 
 Update the specified table and add specified column(s).
 
@@ -52,7 +62,7 @@ Update the specified table and add specified column(s).
 ALTER TABLE users ADD company_id INT;
 ```
 
-**ALTER TABLE <table> ADD FOREIGN KEY (<field>) references <referenced table>(<referenced field>)**
+## ALTER TABLE \<table\> ADD FOREIGN KEY (\<field\>) references \<referenced table\>(\<referenced field\>)
 
 Update the specified table and add a foreign key.
 
@@ -60,7 +70,7 @@ Update the specified table and add a foreign key.
 ALTER TABLE users ADD foreign key (company_id) REFERENCES companies(id);
 ```
 
-**DROP TABLE <table>**
+## DROP TABLE \<table\>
 
 Delete the specified table.
 The following deletes the `users` table.
