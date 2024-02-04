@@ -20,7 +20,7 @@ CREATE TABLE <table>(
 The following creates a table `users`.
 
 ```sql
-mysql> CREATE TABLE users(
+CREATE TABLE users(
     id INT AUTO_INCREMENT,
     name VARCHAR(191),
     PRIMARY KEY(id)
@@ -33,7 +33,9 @@ Show the definition of the specified table.
 The following describes the `users` table.
 
 ```sql
-mysql> DESC users;
+DESC users;
+```
+```bash
 +-------+--------------+------+-----+---------+----------------+
 | Field | Type         | Null | Key | Default | Extra          |
 +-------+--------------+------+-----+---------+----------------+
@@ -47,7 +49,7 @@ mysql> DESC users;
 Update the specified table and add specified column(s).
 
 ```sql
-mysql> ALTER TABLE users ADD company_id INT;
+ALTER TABLE users ADD company_id INT;
 ```
 
 **ALTER TABLE <table> ADD FOREIGN KEY (<field>) references <referenced table>(<referenced field>)**
@@ -55,7 +57,7 @@ mysql> ALTER TABLE users ADD company_id INT;
 Update the specified table and add a foreign key.
 
 ```sql
-mysql> ALTER TABLE users ADD foreign key (company_id) REFERENCES companies(id);
+ALTER TABLE users ADD foreign key (company_id) REFERENCES companies(id);
 ```
 
 **DROP TABLE <table>**
@@ -64,6 +66,6 @@ Delete the specified table.
 The following deletes the `users` table.
 
 ```sql
-mysql> DROP TABLE users;
+DROP TABLE users;
 ```
 

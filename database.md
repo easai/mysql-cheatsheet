@@ -6,7 +6,9 @@ Show a list of available databases.
 Example:
 
 ```sql
-mysql> SHOW DATABASES;
+SHOW DATABASES;
+```
+```bash
 +--------------------+
 | Database           |
 +--------------------+
@@ -20,7 +22,7 @@ Create a database.
 The following creates a database named `directory`.
 
 ```sql
-mysql> CREATE DATABASE directory;
+CREATE DATABASE directory;
 ```
 
 **SELECT DATABASE()**
@@ -28,7 +30,9 @@ mysql> CREATE DATABASE directory;
 Show the selected database.
 
 ```sql
-mysql> SELECT database();
+SELECT database();
+```
+```bash
 +------------+
 | database() |
 +------------+
@@ -42,7 +46,7 @@ Select database.
 The following selects the `directory` database.
 
 ```sql
-mysql> USE directory;
+USE directory;
 ```
 
 **DROP DATABASE <database>**
@@ -51,6 +55,6 @@ Delete the specified database.
 The following deletes `directory` database.
 
 ```sql
-mysql> DROP DATABASE directory;
+DROP DATABASE directory;
 ```
 
