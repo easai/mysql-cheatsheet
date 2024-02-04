@@ -7,7 +7,7 @@ MySQL: Table Related commands
   - [CREATE TABLE](#create-table)
   - [DESC \<table\>](#desc-table)
   - [ALTER TABLE \<table\> ADD \<column\>\<column definition\>](#alter-table-table-add-column-column-definition)
-  - [ALTER TABLE \<table\> ADD FOREIGN KEY (\<field\>) references \<referenced table\>(\<referenced field\>)](#alter-table-table-add-foreign-key-field-references-referenced-table-reference-field)
+  - [ALTER TABLE \<table\> ADD FOREIGN KEY (\<field\>) references \<referenced table\>(\<referenced field\>)](#alter-table-table-add-foreign-key-field-references-referenced-tablereferenced-field)
   - [DROP TABLE \<table\>](#drop-table-table)
 
 ## SHOW TABLES
