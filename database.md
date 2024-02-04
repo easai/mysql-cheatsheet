@@ -4,10 +4,10 @@ MySQL: Database Related commands
 ## Contents
 
   - [SHOW DATABASES](#show-databases)
-  - [CREATE DATABASE \<database\>](#create-database-)
+  - [CREATE DATABASE \<database\>](#create-database-database)
   - [SELECT DATABASE()](#select-database)
-  - [USE \<database\>](#use-)
-  - [DROP DATABASE \<database\>](#drop-database-)
+  - [USE \<database\>](#use-database)
+  - [DROP DATABASE \<database\>](#drop-database-database)
 
 
 ## SHOW DATABASES
