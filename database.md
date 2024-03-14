@@ -12,7 +12,7 @@ MySQL: Database Related commands
 
 ## SHOW DATABASES
 
-Show a list of available databases.
+Show a list of available databases.<br />
 Example:
 
 ```sql
@@ -28,7 +28,7 @@ SHOW DATABASES;
 
 ## CREATE DATABASE \<database\>
 
-Create a database.
+Create a database.<br />
 The following creates a database named `directory`.
 
 ```sql
@@ -52,7 +52,7 @@ SELECT database();
 
 ## USE \<database\>
 
-Select database.
+Select database.<br />
 The following selects the `directory` database.
 
 ```sql
@@ -61,7 +61,7 @@ USE directory;
 
 ## DROP DATABASE \<database\>
 
-Delete the specified database.
+Delete the specified database.<br />
 The following deletes `directory` database.
 
 ```sql

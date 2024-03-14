@@ -26,3 +26,7 @@ MySQL Cheetsheet
     - [SELECT \* FROM \<table\> JOIN \<another table\> ON \<conditionals\>](record.md#select--from-table-join-another-table-on-conditionals)
     - [SELECT \* FROM \<table\> GROUP BY \<field\>](record.md#select--from-table-group-by-field)
     - [SELECT \* FROM \<table\> ORDER BY \<field\>](record.md#select--from-table-order-by-field)
+
+  - [User Related SQL commands](user.md)
+    - [CREATE USER](user.md#create-user)
+    - [GRANT](user.md#grant)
